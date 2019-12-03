@@ -7,24 +7,30 @@
           <li class="proveedor__detalle">Cantidad de productos: {{ proveedor.cantidadProductos }}<br></li>
           <li class="proveedor__detalle">Cantidad de productos viejos: {{ proveedor.cantidadProductosViejos }}</li>
           <li class="proveedor__detalle proveedor__opciones">
-              <b-button variant="primary" class="btn--editar">
-                  <router-link class="boton__enlace" v-bind:to="obtenerEnlace">Editar</router-link>
-              </b-button>
-              <b-button variant="danger">Eliminar</b-button>
+              <router-link class="boton__enlace" v-bind:to="obtenerEnlace">
+                    <b-button variant="primary" class="btn--editar">Editar</b-button>
+              </router-link>
+              <b-button v-on:click="eliminar" variant="danger">Eliminar</b-button>
           </li>
       </ul> 
   </article>
 </template>
 
 <script>
+//import axios from 'axios';
 export default {
     name: 'Proveedor',
     props: {
         proveedor: {},
     },
     computed: {
-        obtenerEnlace: function() {
+        obtenerEnlace: function () {
             return `/proveedores/${this.proveedor.clave}`;
+        }
+    },
+    methods: {
+        eliminar: function () {
+            this.$emit('EliminarProveedor');
         }
     }
 }

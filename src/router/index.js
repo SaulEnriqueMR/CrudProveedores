@@ -1,15 +1,26 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Proveedores from '../views/Proveedores.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Proveedores from '../views/Proveedores.vue';
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'proveedores',
-    component: Proveedores
+    redirect: '/proveedores'
   },
+  {
+    path: '/proveedores',
+    name: 'proveedores',
+    component: Proveedores,
+  },
+  {
+    path: '/proveedores/:id',
+    name: 'proveedorDetallado',
+    alias: '/proveedores',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProveedorDetallado.vue'),
+  },
+  
   {
     path: '/articulos',
     name: 'articulos',

@@ -1,7 +1,7 @@
 <template>
   <section class="app">
     <b-navbar class="nav">
-      <router-link class="nav__enlace" to="/">Proveedores</router-link>|
+      <router-link class="nav__enlace" to="/proveedores">Proveedores</router-link>|
       <router-link class="nav__enlace" to="/articulos">Articulos</router-link>
     </b-navbar>
     <main class="container main">
@@ -51,7 +51,8 @@ body {
   text-decoration: none;
 }
 
-.nav a.router-link-exact-active {
+.nav a.router-link-exact-active,
+.nav a.router-link-active {
   color: #fa9f42;
   text-decoration: none;
 }
@@ -73,11 +74,13 @@ body {
 }
 
 .nav__enlace:hover::after,
-.router-link-exact-active::after {
+.router-link-exact-active::after,
+.router-link-active::after {
     width: 100%;
 }
 
-.nav__enlace.router-link-exact-active::after {
+.nav__enlace.router-link-exact-active::after,
+.nav__enlace.router-link-active::after {
   background: #fa9f42;
 }
 

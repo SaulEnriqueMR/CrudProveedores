@@ -1,9 +1,9 @@
 <template>
   <section>
     <ul v-if="proveedores.length > 0" class="contenedor-objetos">
-      <li v-for="proveedor in proveedores" v-bind:key="proveedor.id">
-        <Proveedor v-bind:proveedor="proveedor"/>
-        </li>
+      <li v-for="(proveedor, index) in proveedores" v-bind:key="index">
+        <Proveedor v-on:EliminarProveedor="eliminarProveedor(proveedor.clave, index)" v-bind:proveedor="proveedor"/>
+      </li>
     </ul>
     <p v-else>No se encontraron proveedores</p>
   </section>
@@ -28,6 +28,26 @@ export default {
     axios.get(this.url)
     .then(response => this.proveedores = response.data)
     .catch(e => console.log(e));
+  },
+  methods: {
+    eliminarProveedor: function (clave, index) {
+      console.log(`${this.url}/${clave}`);
+      axios.delete(`${this.url}/${clave}`)
+      .then(response => {
+        const proveedorRequest = response.data;
+        const proveedorEliminado = this.proveedores.splice(index, 1);
+        console.log(proveedorRequest, proveedorEliminado);
+      })
+      .catch(e => console.log(e));
+    }
+
+    // {
+    //   "clave": "TODAVIANOEXISTE",
+    //   "nombre": "Proveedor nuevo recien creado",
+    //   "emailContacto": "correoeditado@gmail.com",
+    //   "cantidadProductos": 11,
+    //   "cantidadProductosViejos": 5
+    // }
   }
 }
 </script>
