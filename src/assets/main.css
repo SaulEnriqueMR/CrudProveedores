@@ -1,0 +1,15 @@
+.btn--editar {
+  background-color: #1b998b !important;
+  border-color: #1b998b !important;
+}
+
+.btn--editar:hover,
+.btn--editar:active {
+  background-color: #13776c !important;
+  border-color: #13776c !important;
+}
+
+.boton__enlace,
+.boton__enlace:hover {
+  color: #f1f7ed;
+}

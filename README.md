@@ -1,2 +1,29 @@
-# CrudProveedores
-Proyecto final de la materia "Implementación de Aplicaciones Web Interactivas y Responsivas con un Framework MVC", el cuál consiste en un CRUD para proveedores. Este proyecto está implementado en VueJS 
+# crud-proveedor
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,0 +1,32 @@
+{
+    "proveedores": [
+        {
+            "clave": "clv-123",
+            "nombre": "Proveedor POST",
+            "emailContacto": "email@email.com",
+            "cantidadProductos": null,
+            "cantidadProductosViejos": null
+        },
+        {
+            "clave": "P-IMPSE",
+            "nombre": "Importador del Sureste",
+            "emailContacto": "ventas@imp_ses.com",
+            "cantidadProductos": 0,
+            "cantidadProductosViejos": 0
+        },
+        {
+            "clave": "P-YAP",
+            "nombre": "Yet Another Proveedor",
+            "emailContacto": "yap@yap.com",
+            "cantidadProductos": 0,
+            "cantidadProductosViejos": 0
+        },
+        {
+            "clave": "TODAVIANOEXISTE",
+            "nombre": "Proveedor nuevo recien creado",
+            "emailContacto": "correoeditado@gmail.com",
+            "cantidadProductos": 11,
+            "cantidadProductosViejos": 5
+        }
+    ]
+}
