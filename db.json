@@ -2,9 +2,9 @@
   "proveedores": [
     {
       "id": "P-IMPSE",
-      "clave": "P-IMPSE",
+      "clave": "P-IMSE",
       "nombre": "Importador del Sureste",
-      "emailContacto": "ventas@imp_ses.com",
+      "emailContacto": "ventas@impses.com",
       "cantidadProductos": 0,
       "cantidadProductosViejos": 0
     },
@@ -26,11 +26,125 @@
     },
     {
       "id": "TODAVIANOEXISTE",
-      "clave": "TODAVIANOEXISTE",
+      "clave": "PRO-EDI",
       "nombre": "Proveedor nuevo recien creado",
       "emailContacto": "correoeditado@gmail.com",
       "cantidadProductos": 11,
       "cantidadProductosViejos": 5
+    },
+    {
+      "cantidadProductos": 0,
+      "cantidadProductosViejos": 0,
+      "clave": "PRO-VUE",
+      "emailContacto": "algo@vue.com",
+      "nombre": "Nuevo proveedor desde VUE",
+      "id": "_PKcKMS"
+    },
+    {
+      "cantidadProductos": 0,
+      "cantidadProductosViejos": 0,
+      "clave": "vu1-2",
+      "emailContacto": "eea@prov.com",
+      "nombre": "nvproveedor",
+      "id": "bOQ9fmg"
+    }
+  ],
+  "articulos": [
+    {
+      "id": 1,
+      "nombre": "Laptop Acer Aspire A515-51-52BQ",
+      "descripcion": null,
+      "precio": 10999.9900,
+      "estatus": "A",
+      "fechaRegistro": "2017-12-31",
+      "proveedor": {
+        "clave": "P-IMPSE",
+        "nombre": "Importador del Sureste",
+        "emailContacto": "ventas@imp_ses.com",
+        "cantidadProductos": 0,
+        "cantidadProductosViejos": 0
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Laptop Acer Aspire A555-GAMING",
+      "descripcion": null,
+      "precio": 14999.9900,
+      "estatus": "A",
+      "fechaRegistro": "2018-01-15",
+      "proveedor": {
+        "clave": "P-IMPSE",
+        "nombre": "Importador del Sureste",
+        "emailContacto": "ventas@imp_ses.com",
+        "cantidadProductos": 0,
+        "cantidadProductosViejos": 0
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Proyector Epson PowerLite X05+",
+      "descripcion": null,
+      "precio": 7899.0000,
+      "estatus": "A",
+      "fechaRegistro": "2018-03-31",
+      "proveedor": {
+        "clave": "P-YAP",
+        "nombre": "Yet Another Proveedor",
+        "emailContacto": "yap@yap.com",
+        "cantidadProductos": 0,
+        "cantidadProductosViejos": 0
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "fefewefewfewfe",
+      "descripcion": "Prueba articulo nuevo",
+      "precio": 12342.0000,
+      "estatus": null,
+      "fechaRegistro": null,
+      "proveedor": {
+        "clave": "P-IMPSE",
+        "nombre": "Importador del Sureste",
+        "emailContacto": "ventas@imp_ses.com",
+        "cantidadProductos": 0,
+        "cantidadProductosViejos": 0
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "alfas",
+      "descripcion": null,
+      "precio": 1550.0000,
+      "estatus": null,
+      "fechaRegistro": null,
+      "proveedor": null
+    },
+    {
+      "id": 8,
+      "nombre": "prueba 3 vue",
+      "descripcion": null,
+      "precio": 1234.0000,
+      "estatus": null,
+      "fechaRegistro": null,
+      "proveedor": null
+    },
+    {
+      "id": 9,
+      "nombre": "prueba 6 vue",
+      "descripcion": null,
+      "precio": 53434.0000,
+      "estatus": null,
+      "fechaRegistro": null,
+      "proveedor": null
+    },
+    {
+      "id": 11,
+      "nombre": "prueba mil",
+      "descripcion": null,
+      "precio": 4423.0000,
+      "estatus": null,
+      "fechaRegistro": null,
+      "proveedor": null
     }
   ]
 }

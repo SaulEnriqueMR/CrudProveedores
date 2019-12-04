@@ -1,5 +1,8 @@
 <template>
-  <section>
+  <section class="text-right">
+    <router-link class="boton__enlace" to="/proveedores/agregar">
+      <b-button variant="primary" class="btn--editar"><b>&#43;</b> Agregar nuevo proveedor</b-button>
+    </router-link>
     <ul v-if="proveedores.length > 0" class="contenedor-objetos">
       <li v-for="(proveedor, index) in proveedores" v-bind:key="index">
         <Proveedor v-on:EliminarProveedor="eliminarProveedor(proveedor.clave, index)" v-bind:proveedor="proveedor"/>
@@ -40,14 +43,6 @@ export default {
       })
       .catch(e => console.log(e));
     }
-
-    // {
-    //   "clave": "TODAVIANOEXISTE",
-    //   "nombre": "Proveedor nuevo recien creado",
-    //   "emailContacto": "correoeditado@gmail.com",
-    //   "cantidadProductos": 11,
-    //   "cantidadProductosViejos": 5
-    // }
   }
 }
 </script>
@@ -59,7 +54,7 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
   list-style: none;
-  margin: 0;
+  margin: 1rem 0 0 0;
   padding: 0;
 }
 </style>
