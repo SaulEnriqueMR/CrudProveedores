@@ -1,5 +1,5 @@
 <template>
-  <b-form v-on:submit="guardar" class="formulario-proveedor">
+  <b-form v-on:submit="guardar" class="formulario">
     <b-form-group label="Clave del proveedor" 
     label-for="clave">
       <b-form-input id="clave"
@@ -88,15 +88,12 @@ export default {
       if (this.esNuevoProveedor) {
         axios.post(this.url, this.proveedor)
         .then(() => {
-          //console.log(response.data);
           this.regresar();
         })
         .catch(e => console.log(e));
-      }
-      else {
+      } else {
         axios.put(this.url, this.proveedor)
         .then(() => {
-          //console.log(response.data);
           this.regresar();
         })
         .catch(e => console.log(e));
@@ -117,25 +114,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.formulario-proveedor {
-  background: #f1f7ee;
-  border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.5);
-  padding: 1rem;
-  text-align: left;
-}
-.contenedor-botones--formulario {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-.formulario__btn--editar {
-  justify-self: right;
-}
-
-.formulario__btn--cancelar {
-  justify-self: left;
-}
-</style>

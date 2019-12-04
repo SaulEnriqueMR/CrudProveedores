@@ -16,12 +16,6 @@
 </template>
 
 <style>
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
 .app {
   background: #e2efde;
   display: grid;

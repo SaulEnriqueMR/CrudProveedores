@@ -53,12 +53,12 @@
     {
       "id": 1,
       "nombre": "Laptop Acer Aspire A515-51-52BQ",
-      "descripcion": null,
-      "precio": 10999.9900,
+      "descripcion": "Descripcion editada",
+      "precio": 10999.99,
       "estatus": "A",
       "fechaRegistro": "2017-12-31",
       "proveedor": {
-        "clave": "P-IMPSE",
+        "clave": "clv-123",
         "nombre": "Importador del Sureste",
         "emailContacto": "ventas@imp_ses.com",
         "cantidadProductos": 0,
@@ -69,7 +69,7 @@
       "id": 2,
       "nombre": "Laptop Acer Aspire A555-GAMING",
       "descripcion": null,
-      "precio": 14999.9900,
+      "precio": 14999.99,
       "estatus": "A",
       "fechaRegistro": "2018-01-15",
       "proveedor": {
@@ -84,7 +84,7 @@
       "id": 4,
       "nombre": "Proyector Epson PowerLite X05+",
       "descripcion": null,
-      "precio": 7899.0000,
+      "precio": 7899,
       "estatus": "A",
       "fechaRegistro": "2018-03-31",
       "proveedor": {
@@ -99,7 +99,7 @@
       "id": 5,
       "nombre": "fefewefewfewfe",
       "descripcion": "Prueba articulo nuevo",
-      "precio": 12342.0000,
+      "precio": 12342,
       "estatus": null,
       "fechaRegistro": null,
       "proveedor": {
@@ -114,7 +114,7 @@
       "id": 7,
       "nombre": "alfas",
       "descripcion": null,
-      "precio": 1550.0000,
+      "precio": 1550,
       "estatus": null,
       "fechaRegistro": null,
       "proveedor": null
@@ -123,7 +123,7 @@
       "id": 8,
       "nombre": "prueba 3 vue",
       "descripcion": null,
-      "precio": 1234.0000,
+      "precio": 1234,
       "estatus": null,
       "fechaRegistro": null,
       "proveedor": null
@@ -132,7 +132,7 @@
       "id": 9,
       "nombre": "prueba 6 vue",
       "descripcion": null,
-      "precio": 53434.0000,
+      "precio": 53434,
       "estatus": null,
       "fechaRegistro": null,
       "proveedor": null
@@ -141,7 +141,7 @@
       "id": 11,
       "nombre": "prueba mil",
       "descripcion": null,
-      "precio": 4423.0000,
+      "precio": 4423,
       "estatus": null,
       "fechaRegistro": null,
       "proveedor": null

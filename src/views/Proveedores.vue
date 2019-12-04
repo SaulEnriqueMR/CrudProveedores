@@ -34,12 +34,11 @@ export default {
   },
   methods: {
     eliminarProveedor: function (clave, index) {
-      console.log(`${this.url}/${clave}`);
       axios.delete(`${this.url}/${clave}`)
-      .then(response => {
-        const proveedorRequest = response.data;
-        const proveedorEliminado = this.proveedores.splice(index, 1);
-        console.log(proveedorRequest, proveedorEliminado);
+      .then(() => {
+        //const proveedorRequest = response.data;
+        //const proveedorEliminado = this.proveedores.splice(index, 1);
+        this.proveedores.splice(index, 1);
       })
       .catch(e => console.log(e));
     }
@@ -47,14 +46,8 @@ export default {
 }
 </script>
 
-<style>
-.contenedor-objetos {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-items: center;
-  list-style: none;
-  margin: 1rem 0 0 0;
-  padding: 0;
-}
+<style scoped>
+  li {
+    width: 100%;
+  }
 </style>

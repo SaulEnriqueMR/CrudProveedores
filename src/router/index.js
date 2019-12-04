@@ -20,7 +20,6 @@ const routes = [
     alias: '/proveedores',
     component: () => import(/* webpackChunkName: "about" */ '../views/ProveedorDetallado.vue'),
   },
-  
   {
     path: '/articulos',
     name: 'articulos',
@@ -28,6 +27,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Articulos.vue')
+  },
+  {
+    path: '/articulos/:id',
+    name: 'articuloDetallado',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/ArticuloDetallado.vue')
   }
 ]
 
