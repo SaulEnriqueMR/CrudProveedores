@@ -88,11 +88,7 @@
       "estatus": "A",
       "fechaRegistro": "2018-03-31",
       "proveedor": {
-        "clave": "P-YAP",
-        "nombre": "Yet Another Proveedor",
-        "emailContacto": "yap@yap.com",
-        "cantidadProductos": 0,
-        "cantidadProductosViejos": 0
+        "clave": "clv-123"
       }
     },
     {
@@ -116,8 +112,10 @@
       "descripcion": null,
       "precio": 1550,
       "estatus": null,
-      "fechaRegistro": null,
-      "proveedor": null
+      "fechaRegistro": "2019-12-24",
+      "proveedor": {
+        "clave": "PRO-VUE"
+      }
     },
     {
       "id": 8,
@@ -142,6 +140,15 @@
       "nombre": "prueba mil",
       "descripcion": null,
       "precio": 4423,
+      "estatus": null,
+      "fechaRegistro": null,
+      "proveedor": null
+    },
+    {
+      "id": 15,
+      "nombre": "alfas",
+      "descripcion": null,
+      "precio": 1550,
       "estatus": null,
       "fechaRegistro": null,
       "proveedor": null

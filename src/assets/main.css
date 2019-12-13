@@ -49,3 +49,7 @@ body {
 .formulario__btn--cancelar {
   justify-self: left;
 }
+
+.btn--regresar {
+  margin-bottom: 1rem;
+}

@@ -20,7 +20,7 @@ export default {
   name: 'proveedores',
   data: function () {
     return {
-      url: 'http://localhost:3000/proveedores',
+      url: '/proveedores',
       proveedores: [],
     }
   },
@@ -29,8 +29,8 @@ export default {
   },
   created() {
     axios.get(this.url)
-    .then(response => this.proveedores = response.data)
-    .catch(e => console.log(e));
+    .then(response => this.proveedores = response.data);
+    //.catch(e => console.log(e));
   },
   methods: {
     eliminarProveedor: function (clave, index) {
@@ -39,15 +39,19 @@ export default {
         //const proveedorRequest = response.data;
         //const proveedorEliminado = this.proveedores.splice(index, 1);
         this.proveedores.splice(index, 1);
-      })
-      .catch(e => console.log(e));
+      });
+      //.catch(e => console.log(e));
     }
   }
 }
 </script>
 
 <style scoped>
-  li {
-    width: 100%;
-  }
+li {
+  width: 100%;
+}
+
+p {
+  text-align: center;
+}
 </style>

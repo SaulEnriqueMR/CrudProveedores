@@ -1,6 +1,10 @@
 <template>
   <b-form v-on:submit="guardar" class="formulario">
-    <b-form-group label="Clave del proveedor" 
+    <section class="text-left btn--regresar">
+      <b-button v-on:click="regresar" type="button" variant="secondary" class="formulario__btn--cancelar btn--cancelar">Regresar</b-button>
+    </section>
+
+    <b-form-group v-show="esNuevoProveedor" label="Clave del proveedor" 
     label-for="clave">
       <b-form-input id="clave"
       name="clave"
@@ -66,7 +70,7 @@ import axios from 'axios';
 export default {
   data: function () {
     return {
-      url: 'http://localhost:3000/proveedores/',
+      url: '/proveedores',
       esNuevoProveedor: true,
       proveedor: {
         cantidadProductos: '',
@@ -80,8 +84,8 @@ export default {
   methods: {
     obtenerProveedor: function () {
       axios.get(this.url)
-      .then(response => this.proveedor = response.data)
-      .catch(e => console.log(e));
+      .then(response => this.proveedor = response.data);
+      //.catch(e => console.log(e));
     },
     guardar: function (ev) {
       ev.preventDefault();
@@ -89,14 +93,14 @@ export default {
         axios.post(this.url, this.proveedor)
         .then(() => {
           this.regresar();
-        })
-        .catch(e => console.log(e));
+        });
+        //.catch(e => console.log(e));
       } else {
         axios.put(this.url, this.proveedor)
         .then(() => {
           this.regresar();
-        })
-        .catch(e => console.log(e));
+        });
+        //.catch(e => console.log(e));
       }
     },
     regresar: function () {
@@ -106,7 +110,7 @@ export default {
   created() {
     const clave = this.$route.params.id;
     if (clave !== 'agregar') {
-      this.url = `${this.url}${clave}`;
+      this.url = `${this.url}/${clave}`;
       this.proveedor.clave = clave;
       this.obtenerProveedor();
       this.esNuevoProveedor = false;

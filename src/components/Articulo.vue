@@ -1,12 +1,12 @@
 <template>
   <article class="articulo">
     <ul class="articulo__detalles">
-      <li class="articulo__detalle">Nombre: {{ articulo.nombre }}</li>
-      <li class="articulo__detalle">Descripción: {{ articulo.descripcion }}</li>
-      <li class="articulo__detalle">Precio: ${{ articulo.precio }}</li>
-      <li class="articulo__detalle">Estatus: {{ articulo.estatus }}</li>
-      <li class="articulo__detalle">Fecha de registro: {{ articulo.fechaRegistro }}</li>
-      <li class="articulo__detalle" v-if="articulo.proveedor">Proveedor: {{ articulo.proveedor.nombre }}</li>
+      <li class="articulo__detalle"><b>Nombre:</b> {{ articulo.nombre }}</li>
+      <li class="articulo__detalle"><b>Descripción:</b> {{ articulo.descripcion }}</li>
+      <li class="articulo__detalle"><b>Precio:</b> ${{ articulo.precio }}</li>
+      <li class="articulo__detalle"><b>Estatus:</b> {{ articulo.estatus }}</li>
+      <li class="articulo__detalle"><b>Fecha de</b> registro: {{ articulo.fechaRegistro }}</li>
+      <li class="articulo__detalle" v-if="articulo.proveedor"><b>Proveedor:</b> {{ articulo.proveedor.nombre }}</li>
       <li class="articulo__detalle articulo__opciones">
         <router-link class="boton__enlace" v-bind:to="obtenerEnlace">
           <b-button variant="primary" class="btn--editar">Editar</b-button>
@@ -59,6 +59,7 @@ export default {
 .articulo__opciones {
   align-items: flex-end;
   display: flex;
+  grid-row: 7;
   margin-top: 1rem;
   justify-content: space-between;
 }

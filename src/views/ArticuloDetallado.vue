@@ -1,5 +1,8 @@
 <template>
   <b-form v-on:submit="guardar" class="formulario">
+    <section class="text-left btn--regresar">
+      <b-button v-on:click="regresar" type="button" variant="secondary" class="formulario__btn--cancelar btn--cancelar">Regresar</b-button>
+    </section>
     <b-form-group label="Nombre del articulo" 
     label-for="nombre">
       <b-form-input id="nombre"
@@ -72,8 +75,8 @@ import axios from 'axios';
 export default {
   data: function () {
     return {
-      url: 'http://localhost:3000/articulos/',
-      urlProveedores: 'http://localhost:3000/proveedores',
+      url: '/articulos',
+      urlProveedores: '/proveedores',
       esNuevoArticulo: true,
       articulo: {
         nombre: '',
@@ -94,14 +97,14 @@ export default {
         axios.post(this.url, this.articulo)
         .then(() => {
           this.regresar();
-        })
-        .catch(e => console.log(e));
+        });
+        //.catch(e => console.log(e));
       } else {
           axios.put(this.url, this.articulo)
           .then(() => {
             this.regresar();
-          })
-          .catch(e => console.log(e));
+          });
+          //.catch(e => console.log(e));
       }
     },
     regresar: function () {
@@ -111,19 +114,28 @@ export default {
       axios.get(this.url)
       .then(response => {
           this.articulo = response.data;
+          if (this.articulo.proveedor !== null) {
+            const clave = this.articulo.proveedor.clave;
+            this.articulo.proveedor = {};
+            this.articulo.proveedor.clave = clave;
+          }
+          else {
+            this.articulo.proveedor = {};
+            this.articulo.proveedor.clave = null;
+          }
           /*this.articulo.proveedor = {};
           this.articulo.proveedor.clave = response.data.proveedor.clave;*/
-      })
-      .catch(e => console.log(e));
+      });
+      //.catch(e => console.log(e));
     }
   },
   created: function () {
     axios.get(this.urlProveedores)
-    .then(response => this.proveedores = response.data)
-    .catch(e => console.log(e));
+    .then(response => this.proveedores = response.data);
+    //.catch(e => console.log(e));
     const id = this.$route.params.id;
     if (id !== 'agregar') {
-      this.url = `${this.url}${id}`;
+      this.url = `${this.url}/${id}`;
       this.articulo.id = id;
       this.obtenerArticulo();
       this.esNuevoArticulo = false;

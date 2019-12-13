@@ -1,11 +1,11 @@
 <template>
   <article class="proveedor">
     <ul class="proveedor__detalles">
-      <li class="proveedor__detalle">Clave: {{ proveedor.clave }}</li>
-      <li class="proveedor__detalle">Nombre: {{ proveedor.nombre }}</li>
-      <li class="proveedor__detalle">Email de contacto: {{ proveedor.emailContacto }}</li>
-      <li class="proveedor__detalle">Cantidad de productos: {{ proveedor.cantidadProductos }}</li>
-      <li class="proveedor__detalle">Cantidad de productos viejos: {{ proveedor.cantidadProductosViejos }}</li>
+      <li class="proveedor__detalle"><b>Clave:</b> {{ proveedor.clave }}</li>
+      <li class="proveedor__detalle"><b>Nombre:</b> {{ proveedor.nombre }}</li>
+      <li class="proveedor__detalle"><b>Email de contacto:</b> {{ proveedor.emailContacto }}</li>
+      <li class="proveedor__detalle"><b>Cantidad de productos:</b> {{ proveedor.cantidadProductos }}</li>
+      <li class="proveedor__detalle"><b>Cantidad de productos viejos:</b> {{ proveedor.cantidadProductosViejos }}</li>
       <li class="proveedor__detalle proveedor__opciones">
         <router-link class="boton__enlace" v-bind:to="obtenerEnlace">
           <b-button variant="primary" class="btn--editar">Editar</b-button>
@@ -57,6 +57,7 @@ export default {
 .proveedor__opciones {
   align-items: flex-end;
   display: flex;
+  grid-row: 6;
   margin-top: 1rem;
   justify-content: space-between;
 }
